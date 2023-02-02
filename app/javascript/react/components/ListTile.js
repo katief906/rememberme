@@ -3,7 +3,11 @@ import React from "react"
 const ListTile = (props) => {
   const list = props.list
   return(
-    <li>{list.name}</li>
+    <li>
+      <a href='/lists/1'>
+        {list.name}
+      </a>
+    </li>
   )
 }
 
