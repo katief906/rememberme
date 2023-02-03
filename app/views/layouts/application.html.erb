@@ -34,13 +34,10 @@
 
       <!-- Menu -->
       <ul class="vertical menu">
-        <li><a href="/lists/1">Add a list</a></li>
-        <li><a href="/lists/1">Homework</a></li>
-        <li><a href="/lists/1">Assignments</a></li>
-        <li><a href="/lists/1">Errands</a></li>
-        <li><a href="/lists/1">Shopping</a></li>
+        <% @lists.each do |list| %>
+          <li><%= link_to list.name, "/lists/#{list.id}" %></li>
+        <% end %>
       </ul>
-
     </div>
 
     <div class="off-canvas-content" data-off-canvas-content>
