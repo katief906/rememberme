@@ -1,12 +1,13 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 const ListTile = (props) => {
   const list = props.list
   return(
     <li>
-      <a href='/lists/1'>
+      <Link to={`/lists/${list.id}`}>
         {list.name}
-      </a>
+      </Link>
     </li>
   )
 }

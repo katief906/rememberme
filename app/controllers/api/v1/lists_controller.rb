@@ -6,7 +6,7 @@ class Api::V1::ListsController < ApiController
 
   def show
     list = List.find(params[:id])
-    render json: list
+    render json: list, serializer: ListSerializer
   end
 
 end
