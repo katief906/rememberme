@@ -28,11 +28,13 @@ ActiveRecord::Schema.define(version: 2023_01_26_210035) do
     t.integer "priority"
     t.datetime "due_date"
     t.string "description"
-    t.boolean "completed", default: false, null: false
+    t.boolean "completed", null: false
+    t.bigint "user_id", null: false
     t.bigint "list_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["list_id"], name: "index_tasks_on_list_id"
+    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
