@@ -20,10 +20,10 @@ const ListsIndexPage = (props) => {
     }
   }
 
-  let listTiles 
+  let listTiles
 
-  if (lists.length) {
-    listTiles = lists.map((list) => {
+  if (lists.lists) {
+    listTiles = lists.lists.map((list) => {
       return(
         <ListTile
           key={list.id}
@@ -32,7 +32,6 @@ const ListsIndexPage = (props) => {
       )
     })
   }
-
 
   useEffect(() => {
     fetchLists()
