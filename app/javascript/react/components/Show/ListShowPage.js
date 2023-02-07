@@ -8,8 +8,7 @@ const ListShowPage = (props) => {
 
   const fetchList = async() => {
     try {
-      const listId = props.match.params.id
-      const response = await fetch(`/api/v1/lists/${listId}`)
+      const response = await fetch(`/api/v1/lists/${props.id}`)
       if (!response.ok){
         const errorMessage = `${response.status} (${response.statusText})`
         throw new Error(errorMessage)
@@ -33,7 +32,7 @@ const ListShowPage = (props) => {
 
   useEffect(() => {
     fetchList()
-  }, [])
+  }, [props.id])
 
   return (
     <div>
