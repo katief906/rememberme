@@ -1,25 +1,15 @@
-import React, { useState, useEffect } from 'react'
-import { Index, Show } from './ComponentCollection'
+import React, { useState } from 'react'
+import { ComponentChoice } from './ComponentCollection'
 
 export const App = (props) => {
 
-  const [index, setIndex] = useState(true)
-  const [show, setShow] = useState({
-    status: false,
-    id: 0
+  const [page, setPage] = useState({
+    page: "index",
+    id: null
   })
 
-  useEffect(() => {
-    if (show.status === true) {
-      setIndex(false)
-    }
-  }, [show.id])
-
   return (
-    <>
-      <Index toggleIndex={index} setShow={setShow}/>
-      <Show toggleShow={show.status} id={show.id}/>
-    </>
+    <ComponentChoice page={page} setPage={setPage} />
   )
 }
 

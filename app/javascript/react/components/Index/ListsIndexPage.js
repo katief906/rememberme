@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import ListTile from "./ListTile"
 
 const ListsIndexPage = (props) => {
+
   const [lists, setLists] = useState([])
   const [readyToMakeListTiles, setReadyToMakeListTiles] = useState(false)
 
@@ -28,7 +29,7 @@ const ListsIndexPage = (props) => {
         <ListTile
           key={list.id}
           list={list}
-          setShow={props.setShow}
+          setPage={props.setPage}
         />
       )
     })

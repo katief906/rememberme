@@ -4,8 +4,8 @@ const ListTile = (props) => {
   const list = props.list
 
   const handleClick = (e) => {
-    props.setShow({
-      status: true,
+    props.setPage({
+      page: "show",
       id: e.currentTarget.id
     })
   }

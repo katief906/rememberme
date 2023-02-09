@@ -2,20 +2,12 @@ import React from "react";
 import ListsIndexPage from "./Index/ListsIndexPage";
 import ListShowPage from "./Show/ListShowPage";
 
-function Index({toggleIndex, setShow}) {
-  if (toggleIndex) {
-    return <ListsIndexPage setShow={setShow}/>
-  } else {
-    return null
+function ComponentChoice({page, setPage}) {
+  if(page.page === "index") {
+    return <ListsIndexPage setPage={setPage}/>
+  } else if (page.page === "show") {
+    return <ListShowPage id={page.id} />
   }
 }
 
-function Show({toggleShow, id}) {
-  if (toggleShow) {
-    return <ListShowPage id={id}/>
-  } else {
-    return null
-  }
-}
-
-export { Index, Show }
+export { ComponentChoice }
