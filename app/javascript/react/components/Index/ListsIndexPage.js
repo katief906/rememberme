@@ -28,6 +28,7 @@ const ListsIndexPage = (props) => {
         <ListTile
           key={list.id}
           list={list}
+          setShow={props.setShow}
         />
       )
     })
