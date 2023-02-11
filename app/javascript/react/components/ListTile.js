@@ -3,12 +3,14 @@ import { Link } from "react-router-dom"
 
 const ListTile = (props) => {
   const list = props.list
+
   return(
-    <li>
+    <div>
       <Link to={`/lists/${list.id}`}>
-        {list.name}
+        <i className={`${list.color} ${list.icon} list-label`}></i>
+        <h3>{list.name}</h3>
       </Link>
-    </li>
+    </div>
   )
 }
 

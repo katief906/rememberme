@@ -9,4 +9,7 @@ class Api::V1::ListsController < ApiController
     render json: list, serializer: ListSerializer
   end
 
+  def new
+  end
+
 end
