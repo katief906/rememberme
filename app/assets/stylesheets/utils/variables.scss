@@ -1,0 +1,18 @@
+//breakpoints
+//mobile breakpoint should be the default and therefore not included here
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+//fonts
+$primary-font: 'Noto Sans', sans-serif;
+
+//colors
+
+$black: rgba(26, 26, 26, 1);
+$white: rgba(255, 255, 255, 1);
+$light-blue: rgba(199, 231, 242, 1);
+$gray: rgba(128, 128, 128, 1);
+$yellow: rgba(250, 199, 17, 1);
