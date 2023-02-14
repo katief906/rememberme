@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const IconTile = (props) => {
-  const icon = props.icon
+  props.getIconStatus(props.icon)
+  
+  const updateIcon = (event) => {
+    props.setSelectedIcon(props.icon)
+  }
+
   return(
-    <div className="icon">
-      <i className={icon.fontAwesomeCode}></i>
+    <div className={`cell icon ${props.icon.selectedStatus}`} onClick={updateIcon}>
+      <i className={props.icon.fontAwesomeCode}></i>
     </div>
   )
 }

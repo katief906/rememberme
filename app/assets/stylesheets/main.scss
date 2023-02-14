@@ -131,7 +131,10 @@
     cursor: pointer;
     border: 0.1em solid black;
   }
+}
 
+.selected {
+  border-color: black;
 }
 
 .list-label {
