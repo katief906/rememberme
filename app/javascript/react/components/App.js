@@ -1,20 +1,15 @@
-import React from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import ListsIndexPage from './ListsIndexPage'
-import ListTile from './ListTile'
-import ListShowPage from './ListShowPage'
-import NewListForm from './NewListForm'
+import React, { useState } from 'react'
+import { ComponentChoice } from './ComponentCollection'
 
 export const App = (props) => {
+
+  const [page, setPage] = useState({
+    page: "index",
+    id: null
+  })
+
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" component={ListsIndexPage} />
-        <Route exact path="/lists" component={ListsIndexPage} />
-        <Route exact path="/lists/new" component={NewListForm} />
-        <Route exact path="/lists/:id" component={ListShowPage} />
-      </Switch>
-    </BrowserRouter>
+    <ComponentChoice page={page} setPage={setPage} />
   )
 }
 

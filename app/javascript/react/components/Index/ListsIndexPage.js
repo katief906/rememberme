@@ -3,6 +3,7 @@ import { Link } from "react-router-dom"
 import ListTile from "./ListTile"
 
 const ListsIndexPage = (props) => {
+
   const [lists, setLists] = useState([])
   const [readyToMakeListTiles, setReadyToMakeListTiles] = useState(false)
 
@@ -24,18 +25,19 @@ const ListsIndexPage = (props) => {
   let listTiles 
   let newListButton
 
-  if (lists.length) {
+  if (lists.lists) {
     newListButton = <Link to="/lists/new">
       <button className = "button">
         Add a New List
       </button>
     </Link>
 
-    listTiles = lists.map((list) => {
+    listTiles = lists.lists.map((list) => {
       return(
         <ListTile
           key={list.id}
           list={list}
+          setPage={props.setPage}
         />
       )
     })
