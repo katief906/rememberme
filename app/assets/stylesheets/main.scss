@@ -1,0 +1,143 @@
+.icon {
+  border: 0.1em solid silver; 
+  border-radius: 0.25em; 
+  padding: 0.5em;
+  margin: 0.5em;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.1em solid black;
+  }
+}
+
+// Icon Colors
+.red {
+  color: #F02C03;
+}
+
+.orange {
+  color: #FF950C;
+}
+
+.yellow {
+  color: #FEDC03;
+}
+
+.green {
+  color: #7CDA01;
+}
+
+.blue {
+  color: #0D8DFF;
+}
+
+.purple {
+  color: #B02FF7;
+}
+
+// Form Colors
+.red-form-color {
+  border: 0.1em solid silver;
+  background-color: #F02C03;
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  margin: 0.5em;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.1em solid black;
+  }
+}
+
+.orange-form-color {
+  border: 0.1em solid silver;
+  background-color: #FF950C;
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  margin: 0.5em;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.1em solid black;
+  }
+}
+
+.yellow-form-color {
+  border: 0.1em solid silver;
+  background-color: #FEDC03;
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  margin: 0.5em;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.1em solid black;
+  }
+}
+
+.green-form-color {
+  border: 0.1em solid silver;
+  background-color: #7CDA01;
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  margin: 0.5em;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.1em solid black;
+  }
+}
+
+.blue-form-color {
+  border: 0.1em solid silver;
+  background-color: #0D8DFF;
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  margin: 0.5em;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.1em solid black;
+  }
+}
+
+
+.purple-form-color {
+  border: 0.1em solid silver;
+  background-color: #B02FF7;
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  margin: 0.5em;
+
+  &:hover {
+    cursor: pointer;
+    border: 0.1em solid black;
+  }
+}
+
+.selected {
+  border-color: black;
+}
+
+.list-label {
+  height: 2em;
+  display: inline-flex;
+}

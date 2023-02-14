@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(version: 2023_01_26_210035) do
 
   create_table "lists", force: :cascade do |t|
     t.string "name", null: false
+    t.string "icon", null: false
+    t.string "color", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

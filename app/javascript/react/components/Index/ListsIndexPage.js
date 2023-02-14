@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react"
+import { Link } from "react-router-dom"
 import ListTile from "./ListTile"
 
 const ListsIndexPage = (props) => {
@@ -14,16 +15,23 @@ const ListsIndexPage = (props) => {
         throw new Error(errorMessage)
       }
       const listData = await response.json()
-      setLists(listData)
+      setLists(listData.lists)
       setReadyToMakeListTiles(true)
     } catch(error) {
       console.error(`Error in fetch: ${error.message}`)
     }
   }
 
-  let listTiles
+  let listTiles 
+  let newListButton
 
   if (lists.lists) {
+    newListButton = <Link to="/lists/new">
+      <button className = "button">
+        Add a New List
+      </button>
+    </Link>
+
     listTiles = lists.lists.map((list) => {
       return(
         <ListTile
@@ -45,6 +53,9 @@ const ListsIndexPage = (props) => {
       <ul>
         {listTiles}
       </ul>
+      <div>
+        {newListButton}
+      </div>
     </div>
   )
 }
