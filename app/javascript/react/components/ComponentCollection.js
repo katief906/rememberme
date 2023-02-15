@@ -4,9 +4,9 @@ import ListShowPage from "./Show/ListShowPage";
 import NewListForm from "./Index/NewListForm"
 import NewTaskForm from "./Show/NewTaskForm"
 
-function ComponentChoice({page, setPage}) {
+function ComponentChoice({page, setPage, lists}) {
   if(page.page === "index") {
-    return <ListsIndexPage setPage={setPage}/>
+    return <ListsIndexPage lists={lists} setPage={setPage}/>
   } else if (page.page === "show") {
     return <ListShowPage id={page.id} setPage={setPage}/>
   } else if (page.page === "form") {
