@@ -10,4 +10,4 @@ function ComponentChoice({page, setPage}) {
   }
 }
 
-export { ComponentChoice }
+export default ComponentChoice

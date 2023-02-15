@@ -24,28 +24,6 @@
     </section>
   </nav>
 
-  <button type="button" class="button" data-toggle="offCanvas">Open Menu</button>
-  <div>
-    <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
-
-      <!-- Close button -->
-      <button class="close-button" aria-label="Close menu" type="button" data-close>
-        <span aria-hidden="true">&times;</span>
-      </button>
-
-      <!-- Menu -->
-      <ul class="vertical menu">
-        <% @lists.each do |list| %>
-          <li><%= link_to list.name, "/lists/#{list.id}" %></li>
-        <% end %>
-      </ul>
-    </div>
-
-    <div class="off-canvas-content" data-off-canvas-content>
-      <!-- Your page content lives here -->
-    </div>
-  </div>
-
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>
