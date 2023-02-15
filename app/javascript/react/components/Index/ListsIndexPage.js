@@ -1,23 +1,7 @@
-import React, {useState, useEffect} from "react"
+import React, { useEffect} from "react"
 import ListTile from "./ListTile"
 
 const ListsIndexPage = (props) => {
-
-  const [lists, setLists] = useState([])
-
-  const fetchLists = async() => {
-    try {
-      const response = await fetch("/api/v1/lists")
-      if (!response.ok) {
-        const errorMessage = `${response.status} (${response.statusText})`
-        throw new Error(errorMessage)
-      }
-      const listData = await response.json()
-      setLists(listData.lists)
-    } catch(error) {
-      console.error(`Error in fetch: ${error.message}`)
-    }
-  }
 
   const handleClick = () => {
     props.setPage({
@@ -26,29 +10,15 @@ const ListsIndexPage = (props) => {
     })
   }
 
-  let listTiles 
-  let newListButton
-
-  if (lists.length > 0) {
-    newListButton =
-      <button className = "button" onClick={handleClick}>
-        Add a New List
-      </button>
-
-    listTiles = lists.map((list) => {
-      return(
-        <ListTile
-          key={list.id}
-          list={list}
-          setPage={props.setPage}
-        />
-      )
-    })
-  }
-
-  useEffect(() => {
-    fetchLists()
-  }, [])
+  const listTiles = props.lists.map((list) => {
+    return(
+      <ListTile
+        key={list.id}
+        list={list}
+        setPage={props.setPage}
+      />
+    )
+  })
 
   return(
     <div>
@@ -56,9 +26,9 @@ const ListsIndexPage = (props) => {
       <ul>
         {listTiles}
       </ul>
-      <div>
-        {newListButton}
-      </div>
+      <button className = "button" onClick={handleClick}>
+        Add a New List
+      </button>
     </div>
   )
 }
