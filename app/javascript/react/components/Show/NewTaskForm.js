@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import ErrorList from "./ErrorList"
+import ErrorList from "../ErrorList"
 
 const NewTaskForm = (props) => {
   const [newTask, setNewTask] = useState({

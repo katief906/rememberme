@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
-import IconTile from "./IconTile"
-import ColorTile from "./ColorTile"
-import ErrorList from "./ErrorList"
+import IconTile from "../IconTile"
+import ColorTile from "../ColorTile"
+import ErrorList from "../ErrorList"
 import _ from "lodash"
 
 const NewListForm = (props) => {

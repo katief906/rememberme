@@ -1,39 +1,41 @@
 import React, {useState, useEffect} from "react"
-import { Link } from "react-router-dom"
 import ListTile from "./ListTile"
 
 const ListsIndexPage = (props) => {
 
   const [lists, setLists] = useState([])
-  const [readyToMakeListTiles, setReadyToMakeListTiles] = useState(false)
 
   const fetchLists = async() => {
     try {
       const response = await fetch("/api/v1/lists")
-      // debugger
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         throw new Error(errorMessage)
       }
       const listData = await response.json()
       setLists(listData.lists)
-      setReadyToMakeListTiles(true)
     } catch(error) {
       console.error(`Error in fetch: ${error.message}`)
     }
   }
 
+  const handleClick = () => {
+    props.setPage({
+      page: "form",
+      id: null
+    })
+  }
+
   let listTiles 
   let newListButton
 
-  if (lists.lists) {
-    newListButton = <Link to="/lists/new">
-      <button className = "button">
+  if (lists.length > 0) {
+    newListButton =
+      <button className = "button" onClick={handleClick}>
         Add a New List
       </button>
-    </Link>
 
-    listTiles = lists.lists.map((list) => {
+    listTiles = lists.map((list) => {
       return(
         <ListTile
           key={list.id}
