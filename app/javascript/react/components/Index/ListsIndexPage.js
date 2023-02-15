@@ -19,12 +19,19 @@ const ListsIndexPage = (props) => {
     }
   }
 
+  const handleClick = () => {
+    props.setPage({
+      page: "form",
+      id: null
+    })
+  }
+
   let listTiles 
   let newListButton
 
   if (lists.length > 0) {
     newListButton =
-      <button className = "button">
+      <button className = "button" onClick={handleClick}>
         Add a New List
       </button>
 

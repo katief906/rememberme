@@ -30,6 +30,13 @@ const ListShowPage = (props) => {
     })
   }
 
+  const handleClick = (e) => {
+    props.setPage({
+      page: "task",
+      id: e.currentTarget.id
+    })
+  }
+
   useEffect(() => {
     fetchList()
   }, [props.id])
@@ -40,6 +47,9 @@ const ListShowPage = (props) => {
       <ul>
         {taskCollection}
       </ul>
+      <button id={props.id} className="button" onClick={handleClick}>
+        Add a New Task
+      </button>
     </div>
 
   )
