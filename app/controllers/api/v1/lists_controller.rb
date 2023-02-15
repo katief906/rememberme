@@ -1,7 +1,8 @@
 class Api::V1::ListsController < ApiController
 
   def index
-    render json: List.all()
+    # binding.pry
+    render json: List.all
   end
 
   def show

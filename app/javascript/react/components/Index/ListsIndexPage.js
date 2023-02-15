@@ -10,6 +10,7 @@ const ListsIndexPage = (props) => {
   const fetchLists = async() => {
     try {
       const response = await fetch("/api/v1/lists")
+      // debugger
       if (!response.ok) {
         const errorMessage = `${response.status} (${response.statusText})`
         throw new Error(errorMessage)
