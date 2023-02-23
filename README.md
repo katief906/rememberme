@@ -1,24 +1,3 @@
-# README
+# Rememberme
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To-do list app built using React with Ruby as the backend. Utilizing react's stateful components, we managed to exclude any URL's and have the app navigation solely exist on the home path with stateful variables guiding the apps navigation.
